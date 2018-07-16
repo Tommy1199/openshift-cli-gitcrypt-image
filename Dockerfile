@@ -2,7 +2,7 @@ FROM widerin/openshift-cli
 
 MAINTAINER Sascha Selzer sascha.selzer@gmail.com
 
-RUN apk --no-cache add ca-certificates && \
+RUN apk --no-cache add ca-certificates jq && \
     wget \
         "https://raw.githubusercontent.com/sgerrand/alpine-pkg-git-crypt/master/sgerrand.rsa.pub" \
         -O "/etc/apk/keys/sgerrand.rsa.pub"  && \
